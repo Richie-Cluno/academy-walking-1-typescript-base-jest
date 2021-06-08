@@ -1,33 +1,27 @@
 import {FibonacciAtPos} from "../main/fibonacci";
 
-describe('Test Fibonacci at a position', () => {
-    it("Should return 0 when the position is 0", () => {
-        let position = 0;
-        expect(FibonacciAtPos(position)).toBe(0);
-    })
-
-    it("Should return 1 when the position is 1", () => {
-        let position = 1;
-        expect(FibonacciAtPos(position)).toBe(1);
-    })
-
-    it("Should return 1 when the position is 2", () => {
-        let position = 2;
-        expect(FibonacciAtPos(position)).toBe(1);
-    })
-
-    it("Should return 2 when the position is 3", () => {
-        let position = 3;
-        expect(FibonacciAtPos(position)).toBe(2);
-    })
-
-    it("Should return 3 when the position is 4", () => {
-        let position = 4;
-        expect(FibonacciAtPos(position)).toBe(3);
-    })
-
-    it("Should return 34 when the position is 9", () => {
-        let position = 9;
-        expect(FibonacciAtPos(position)).toBe(34);
-    })
-})
+ describe('Test Fibonacci at a position', () => {
+    it.each(
+        [[0,0],
+            [1,1],
+            [2,1],
+            [3,2],
+            [4,3],
+            [5,5],
+            [6,8],
+            [7,13],
+            [8,21],
+            [9,34],
+            [10,55],
+            [11,89],
+            [12,144],
+            [13,233],
+            [14,377],
+            [15,610],
+            [18,2584],
+            [20,6765],
+            [28,317811]])
+        ("Should return %i when the position is %i", (position:number, expected:number) =>{
+            expect(FibonacciAtPos(position)).toBe(expected);
+        })
+ })

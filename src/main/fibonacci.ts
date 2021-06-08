@@ -8,12 +8,12 @@ export function FibonacciAtPos(position: number): number{
     let i = 2;
     let a = 0;
     let b = 1
-    let c = 0
+    let result = 0
     while(i <= position) {
-        c = a + b;
+        result = a + b;
         a = b;
-        b = c;
+        b = result;
         i = i + 1;
     }
-    return c;
+    return result;
 }
