@@ -15,4 +15,19 @@ describe('Test Fibonacci at a position', () => {
         let position = 2;
         expect(FibonacciAtPos(position)).toBe(1);
     })
+
+    it("Should return 2 when the position is 3", () => {
+        let position = 3;
+        expect(FibonacciAtPos(position)).toBe(2);
+    })
+
+    it("Should return 3 when the position is 4", () => {
+        let position = 4;
+        expect(FibonacciAtPos(position)).toBe(3);
+    })
+
+    it("Should return 34 when the position is 9", () => {
+        let position = 9;
+        expect(FibonacciAtPos(position)).toBe(34);
+    })
 })
