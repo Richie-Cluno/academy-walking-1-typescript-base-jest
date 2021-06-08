@@ -1,3 +1,6 @@
 export function FibonacciAtPos(position: number): number{
-    return 0;
+    if (position === 0){
+        return 0;
+    }
+    return 1;
 }
